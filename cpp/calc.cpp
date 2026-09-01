@@ -3,8 +3,7 @@
 int main(){
 
     int input;
-    float number1;
-    float number2;
+    float number1, number2;
 
     std::cout << "Choose one of the following operation" << std::endl;
     std::cout << "Input choice number" << std::endl;
@@ -14,24 +13,28 @@ int main(){
     std::cout << "4. Multiplication" << std::endl;
     
     std::cin >> input;
-    std::cout << "Enter two numbers seperated by spaces" << std::endl;
+    if (input < 1 || input > 4){
+        std::cout << "Invalid input" << std::endl;
+        return 0;
+    }
+    std::cout << "Enter two numbers seperated by spaces:" << std::endl;
     std::cin >> number1 >> number2;
 
     if (input == 1)
     {
-        std::cout << "Result" << float(number1 + number2) << std::endl;
+        std::cout << "Result: " << float(number1 + number2) << std::endl;
     }
     if (input == 2)
     {
-        std::cout << "Result" << float(number1 - number2) << std::endl;
+        std::cout << "Result: " << float(number1 - number2) << std::endl;
     }
     if (input == 3)
     {
-        std::cout << "Result" << float(number1 / number2) << std::endl;
+        std::cout << "Result: " << float(number1 / number2) << std::endl;
     }
     if (input == 4)
     {
-        std::cout << "Result" << float(number1 * number2) << std::endl;
+        std::cout << "Result: " << float(number1 * number2) << std::endl;
     }
 
 }
