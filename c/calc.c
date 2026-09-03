@@ -4,12 +4,8 @@ int main(){
     int num1, num2, inp;
     float result;
 
-    printf("Enter choice number\n");
-    printf("1. Addition\n");
-    printf("2. Subtraction\n");
-    printf("3. Division\n");
-    printf("4. Multiplication\n");
-    printf("Enter number: ");
+    printf("Choose operation\n1. Addition\n2. Subtraction\n3. Division\n4. Multiplication\n");
+    printf("Enter choice number; ");
     scanf("%d", &inp);
 
     if (inp > 5 || inp < 1){
