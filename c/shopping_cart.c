@@ -21,7 +21,7 @@ int main(){
 
     if (itemint < 1 || itemint > 5) {
         printf("Invalid choice. Please select a valid item number.\n");
-        return 1; // Exit the program with an error code
+        return 1;
     }
     if (itemint == 1) {
         printf("You have selected Pizza.\n");
@@ -51,5 +51,5 @@ int main(){
     }
     printf("Total cost: $%.2f\n", total);
 
-    return 0; // Exit the program successfully
+    return 0;
 }
