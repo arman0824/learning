@@ -9,32 +9,32 @@ int main(){
     double weight, ans;
 
     printf("Enter your choice\n1. Pound to kilogram.\n2. Kilogram to pound\n");
-    scanf("%d", &num);
 
     while (true)
     {
         printf("Enter your choice: ");
-        scanf("%d", &num);
+        scanf(" %d", &num);
 
    
         if (num == 1)
         {
             printf("Enter weight in Pounds: ");
-            scanf("%lf", &weight);
+            scanf(" %lf", &weight);
             ans = weight * ptkg;
-            printf("%.3f", ans);
+            printf("Converted to Kilogram %.3f Kg", ans);
             break;
 
         }
         else if (num == 2)
         {
             printf("Enter weight in Kilogram: ");
-            scanf("%lf", &weight);
+            scanf(" %lf", &weight);
             ans = weight * kgtp;
-            printf("%.3f", ans);
+            printf("Converted to pound: %.3f lbs", ans);
             break;
         }
-        else{
+        else
+        {
             printf("Invalid Input enter a choice 1 or 2\n");
         }
     }
