@@ -21,7 +21,7 @@ int main(){
             printf("Enter weight in Pounds: ");
             scanf(" %lf", &weight);
             ans = weight * ptkg;
-            printf("Converted to Kilogram %.3f Kg", ans);
+            printf("%.3f Pounds Converted to Kilograms is: %.3f Kg", weight, ans);
             break;
 
         }
@@ -30,7 +30,7 @@ int main(){
             printf("Enter weight in Kilogram: ");
             scanf(" %lf", &weight);
             ans = weight * kgtp;
-            printf("Converted to pound: %.3f lbs", ans);
+            printf("%.3f Kilograms Converted to pounds is: %.3f lbs", weight, ans);
             break;
         }
         else
