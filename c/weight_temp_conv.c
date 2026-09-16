@@ -34,7 +34,7 @@ int main(){
         }
     }
     
-    while (status == true)
+    while (status)
     {
         printf("Select an operation: ");
         scanf(" %d", &num);
@@ -65,7 +65,7 @@ int main(){
     
     
     
-    while (status == false)
+    while (!status)
     {
         printf("Select an operation: ");
         scanf(" %d", &num);
