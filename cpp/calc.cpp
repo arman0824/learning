@@ -19,30 +19,30 @@ int main(){
         cout << "Enter choice: ";
         cin >> input;
         if (input < 1 || input > 4){
-            cout << "Invalid input" << endl;
+            cout << "Invalid input ";
         }
         else{
             break;
         }
     }
-        cout << "Enter two numbers seperated by spaces:";
-        cin >> number1 >> number2;
+    cout << "Enter two numbers seperated by spaces:";
+    cin >> number1 >> number2;
 
-        if (input == 1)
-        {
-            cout << "Result: " << float(number1 + number2) << endl;
-        }
-        if (input == 2)
-        {
-            cout << "Result: " << float(number1 - number2) << endl;
-        }
-        if (input == 3)
-        {
-            cout << "Result: " << float(number1 / number2) << endl;
-        }
-        if (input == 4)
-        {
-            cout << "Result: " << float(number1 * number2) << endl;
-        }
+    if (input == 1)
+    {
+        cout << "Result: " << float(number1 + number2) << endl;
+    }
+    if (input == 2)
+    {
+        cout << "Result: " << float(number1 - number2) << endl;
+    }
+    if (input == 3)
+    {
+        cout << "Result: " << float(number1 / number2) << endl;
+    }
+    if (input == 4)
+    {
+        cout << "Result: " << float(number1 * number2) << endl;
+    }
     
 }
