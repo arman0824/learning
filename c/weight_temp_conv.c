@@ -63,8 +63,6 @@ int main(){
         }
     }
     
-    
-    
     while (!status)
     {
         printf("Select an operation: ");
