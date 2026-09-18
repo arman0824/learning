@@ -2,28 +2,26 @@
 #include <stdbool.h>
 
 int main(){
-    int num1, num2, inp;
+    double num1, num2;
+    int inp;
     float result;
 
     printf("Choose operation\n1. Addition\n2. Subtraction\n3. Division\n4. Multiplication\n");
 
     while(true)
     {
-        printf("Enter choice number: ");
+        printf("Enter choice: ");
         scanf("%d", &inp);
 
         if (inp > 4 || inp < 1){
-            printf("Error Incorrect choice number\n");
+            printf("Error Incorrect choice number, ");
         }
         else{
-            printf("Enter value for number 1: ");
-            scanf("%d", &num1);
-            
-            printf("Enter value for number 2: ");
-            scanf("%d", &num2);
             break;
         }
     }
+    printf("Enter value for two numbers seperated by spaces: ");
+    scanf("%lf %lf", &num1, &num2);
 
     switch (inp)
     {
@@ -40,5 +38,5 @@ int main(){
         result = num1 * num2;
         break;
     }
-    printf("The Result Is: %.2f\n", result);
+    printf("The Result Is: %.2lf\n", result);
 }
