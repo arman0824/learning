@@ -5,36 +5,44 @@ int main(){
     int input;
     float number1, number2;
 
-    std::cout << "Choose one of the following operation" << std::endl;
-    std::cout << "Input choice number" << std::endl;
-    std::cout << "1. Addition" << std::endl;
-    std::cout << "2. Subtraction" << std::endl;
-    std::cout << "3. Division" << std::endl;
-    std::cout << "4. Multiplication" << std::endl;
+    using namespace std;
+
+    cout << "Choose one of the following operation" << endl;
+    cout << "Input choice number" << endl;
+    cout << "1. Addition" << endl;
+    cout << "2. Subtraction" << endl;
+    cout << "3. Division" << endl;
+    cout << "4. Multiplication" << endl;
     
-    std::cin >> input;
-    if (input < 1 || input > 4){
-        std::cout << "Invalid input" << std::endl;
-        return 0;
+    while (true)
+    {
+        cout << "Enter choice: ";
+        cin >> input;
+        if (input < 1 || input > 4){
+            cout << "Invalid input" << endl;
+        }
+        else{
+            break;
+        }
     }
-    std::cout << "Enter two numbers seperated by spaces:" << std::endl;
-    std::cin >> number1 >> number2;
+        cout << "Enter two numbers seperated by spaces:";
+        cin >> number1 >> number2;
 
-    if (input == 1)
-    {
-        std::cout << "Result: " << float(number1 + number2) << std::endl;
-    }
-    if (input == 2)
-    {
-        std::cout << "Result: " << float(number1 - number2) << std::endl;
-    }
-    if (input == 3)
-    {
-        std::cout << "Result: " << float(number1 / number2) << std::endl;
-    }
-    if (input == 4)
-    {
-        std::cout << "Result: " << float(number1 * number2) << std::endl;
-    }
-
+        if (input == 1)
+        {
+            cout << "Result: " << float(number1 + number2) << endl;
+        }
+        if (input == 2)
+        {
+            cout << "Result: " << float(number1 - number2) << endl;
+        }
+        if (input == 3)
+        {
+            cout << "Result: " << float(number1 / number2) << endl;
+        }
+        if (input == 4)
+        {
+            cout << "Result: " << float(number1 * number2) << endl;
+        }
+    
 }
