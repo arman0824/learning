@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 int main(){
 
@@ -8,8 +9,15 @@ int main(){
 
     int comp = ((rand() % 3) + 1), user;
 
-    printf("***ROCK PAPER SCISSORS***\nSelect your MOVE(1-3): ");
+    printf("***ROCK PAPER SCISSORS***\n1. Rock\n2. Paper\n3. Scissors\nSelect your MOVE(1-3): ");\
     scanf("%d", &user);
+
+    while (user > 3 || user < 1)
+    {
+        printf("Invalid choice, Select your MOVE(1-3): ");
+        scanf("%d", &user);  
+    }
+    
 
     while (comp == 1)
     {
