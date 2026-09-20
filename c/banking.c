@@ -5,17 +5,17 @@
 
 int GetUserChoice();
 int InvalidSel();
-double CheckBalance();
-double Withdraw();
-double Deposit();
+void CheckBalance();
+void Withdraw();
+void Deposit();
 
-double balance=0, deposit=0, withdraw=0;
+float balance=0, deposit=0, withdraw=0;
 int choice;
 char user[20] = "";
 
 int main(){
 
-    printf("***WELCOME TO CITY BANK***\n");
+    printf("*** WELCOME TO CITY BANK ***\n");
     printf("Enter your name to continue: ");
     fgets(user, sizeof(user), stdin);
     user[strlen(user) - 1] = '\0';
@@ -43,7 +43,7 @@ int main(){
             Withdraw();
             break;
         case 4:
-            printf("Thank you for using our services.");
+            printf("Thank you for using our services.\n");
             return 0;
         default:
             InvalidSel();
@@ -55,7 +55,7 @@ int main(){
 
 int InvalidSel(){
     printf("Invalid selection, Select an option: ");
-    scanf("%d", &choice);
+    scanf(" %d", &choice);
     return choice;
 }
 
@@ -65,23 +65,26 @@ int GetUserChoice(){
     return choice;
 }
 
-double CheckBalance(){
-    printf("Your current balance is: %lf", balance);
-    return balance;
+void CheckBalance(){
+    printf("Your current balance is: ₹%.2f\n", balance);
 }
 
-double Withdraw(){
-    printf("Enter the ammount you'd like to Withdraw: ");
-    scanf(" %lf", &withdraw);
-    balance -= withdraw;
-    printf("Withdrawal of ₹%lf is Successful", withdraw);
-    return balance;
+void Withdraw(){
+    printf("Enter the ammount you'd like to Withdraw: ₹");
+    scanf(" %f", &withdraw);
+    if (withdraw>balance)
+    {
+        printf("Error you are low on Balance\n");
+    }else
+    {
+        balance -= withdraw;
+        printf("Withdrawal of ₹%.2f is Successful\n", withdraw);
+    }
 }
 
-double Deposit(){
-    printf("Enter the ammount you'd like to Deposit: ");
-    scanf(" %lf", &deposit);
+void Deposit(){
+    printf("Enter the ammount you'd like to Deposit: ₹");
+    scanf(" %f", &deposit);
     balance += deposit;
-    printf("Deposited ₹%lf Successfully", deposit);
-    return balance;
+    printf("Deposited ₹%.2f Successfully\n", deposit);
 }
