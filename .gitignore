@@ -1,13 +1,15 @@
+# 1. Specific files/directories to ignore
 learning.code-workspace
 tp.py
 .DS_Store
-.venv
-.vscode
-learning.code-workspace
-tp.py
-.DS_Store
-.venv
-.vscode
-*
-!*.*
-!*/
+.venv/
+.vscode/
+
+# 2. Ignore compiled extensionless binaries inside c/ and cpp/ folders
+c/*
+!c/*.*
+!c/**/
+
+cpp/*
+!cpp/*.*
+!cpp/**/
