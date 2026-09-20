@@ -3,3 +3,13 @@ tp.py
 .DS_Store
 .venv
 .vscode
+learning.code-workspace
+tp.py
+.DS_Store
+.venv
+.vscode
+
+# Ignore compiled binaries without extensions across all folders
+*
+!*.*
+!*/
