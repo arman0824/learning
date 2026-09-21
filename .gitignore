@@ -9,7 +9,7 @@ tp.py
 c/*
 !c/*.*
 !c/**/
-
+tp.c
 cpp/*
 !cpp/*.*
 !cpp/**/
