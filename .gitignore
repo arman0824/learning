@@ -13,3 +13,4 @@ tp.c
 cpp/*
 !cpp/*.*
 !cpp/**/
+c/.DS_Store
