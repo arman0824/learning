@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Input</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+        .container { text-align: center; }
+        input { padding: 8px; margin-right: 10px; }
+        button { padding: 8px 16px; cursor: pointer; }
+        #output { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Age</h1>
+        <input type="number" id="ageInput" placeholder="Your age">
+        <button onclick="showMessage()">Submit</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const age = document.getElementById('ageInput').value;
+            if (age) {
+                document.getElementById('output').textContent = 'Hello World';
+            }
+        }
+    </script>
+</body>
+</html>
