@@ -34,7 +34,7 @@ def get_bet(amount):
             if bet.isdigit():
                 bet = int(bet)
                 if bet > amount:
-                     print("You're low on balance")
+                     print(f"You're low on balance, Current balance ${amount}")
                 elif bet > MAX_BET or bet < MIN_BET:
                     print(f"Bet amount must be between ${MIN_BET} - ${MAX_BET}.")
                 else:
