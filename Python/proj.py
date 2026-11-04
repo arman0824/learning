@@ -42,18 +42,21 @@ def get_bet(amount):
             else:
                  print("Enter a valid bet")
     return bet
-
-def update_balance(amount, bet):
-     amount = amount - bet
-     return amount
      
 
 
 def main():
     balance = deposit()
     lines = get_lines()
-    bet = get_bet(balance)
-    updated_balance = update_balance(balance, bet)
-    print(balance, lines, bet, updated_balance)
+    while True:
+        bet = get_bet(balance)
+        total_bet = bet * lines
+
+        if total_bet > balance:
+            print(f"You do not have enough balance.\nYour current balance is ${balance}")
+        else:
+            balance -= total_bet
+            break
+    print(f"You are betting ${bet} on {lines} lines. Total bet is ${total_bet}\nYour current balance is ${balance}")
 
 main()
